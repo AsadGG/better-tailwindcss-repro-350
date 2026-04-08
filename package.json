@@ -4,32 +4,37 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "dev": "vite --mode staging",
+    "build": "tsc -b && vite build --mode production",
+    "preview": "vite preview",
+    "lint": "eslint --cache .",
+    "lint:fix": "eslint --fix --cache ."
   },
   "dependencies": {
-    "@antfu/eslint-config": "^8.0.0",
-    "@eslint-react/eslint-plugin": "^3.0.0",
-    "eslint-plugin-better-tailwindcss": "^4.3.2",
-    "eslint-plugin-unicorn": "^64.0.0",
+    "@tailwindcss/vite": "^4.2.1",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "tailwindcss": "^4.2.2"
+    "tailwind-merge": "^3.5.0",
+    "tailwindcss": "^4.2.1",
+    "tw-animate-css": "^1.4.0"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^7.7.2",
+    "@eslint-react/eslint-plugin": "^2.13.0",
     "@eslint/js": "^9.39.4",
-    "@types/node": "^24.12.2",
+    "@types/node": "^22.19.15",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^6.0.1",
-    "eslint": "^10.2.0",
+    "@vitejs/plugin-react": "^5.2.0",
+    "babel-plugin-react-compiler": "^1.0.0",
+    "eslint": "^9.39.4",
+    "eslint-plugin-better-tailwindcss": "^4.3.2",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.5.2",
+    "eslint-plugin-unicorn": "^63.0.0",
     "globals": "^17.4.0",
-    "typescript": "~6.0.2",
-    "typescript-eslint": "^8.58.0",
-    "vite": "^8.0.4"
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.57.0",
+    "vite": "^7.3.1"
   }
 }
